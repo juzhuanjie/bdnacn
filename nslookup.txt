@@ -1,0 +1,6 @@
+C:\Users\huafp>NSLOOKUP svr1005.bdnacorp.com 10.10.0.2
+Server:  UnKnown
+Address:  10.10.0.2
+
+Name:    svr1005.bdnacorp.com
+Address:  10.10.1.75

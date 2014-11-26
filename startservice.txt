@@ -4,3 +4,5 @@
 
 "c:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe" -u "D:\BDNACN2013\NormalBot\NormalizeBot\BDNA.NormalBot.Service\bin\Debug\NormalBotService.exe"
 
+
+3969369

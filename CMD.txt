@@ -1,0 +1,143 @@
+
+Delete Datasouce
+
+NormalizeCMD -DELETEDATASOURCE /JOB_ID=10000
+
+-------------
+
+Service Now CMD
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,35" /IS_ENABLED_API=1 /SERVICENOW_URL=https://dev065.service-now.com /API_USERNAME=bdna /API_PASSWORD=bdna123 /UNC_PATH=\\192.168.8.25\APP\BDNA\SERVICENOW /UNC_USERNAME=BDNACN\sunkj /UNC_PASSWORD=bdnacn
+
+-------------
+
+CM 2007 
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,2" /SERVER_NAME=192.168.11.186 /DATABASE=CM_001 /USERNAME=sa /PASSWORD=Simple.0 /DATABASE_TYPE=MSSQLSERVER /CONFIG=sccm.extractor.config
+
+-------------
+
+ASG Trackbird
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,21" /SERVER_NAME=127.0.0.1 /SID=ora11g /USERNAME=normalize /PASSWORD=bdnacn /DATABASE_TYPE=ORACLE /CONFIG=trackbird.extractor(ORA).config
+
+-------------
+
+CiscoWorks LAN Management Solution (LMS)
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,29" /SERVER_NAME=192.168.11.236 /DATABASE=testDatabase /USERNAME=dba /PASSWORD=bdna /DATABASE_TYPE=sybase /CONFIG=ciscoworks.extractor(SQA).config
+
+-------------
+
+Dell KACE 
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,39" /SERVER_NAME=192.168.11.233 /DATABASE=ddmi /USERNAME=root /PASSWORD=bdna /DATABASE_TYPE=mysql /CONFIG=kace.extractor(mysql).config
+
+-------------
+
+IBM Tivoli Application Dependency Discovery Manager
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,13" /SERVER_NAME=192.168.11.234 /DATABASE=DB2 /USERNAME=db2admin /PASSWORD=Simple.0 /DATABASE_TYPE=DB2 /CONFIG=taddm.extractor(DB2).config
+
+-------------
+
+Other: Normalize Zip File
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,31" /ZIP_FILE_PATH="C:\Program Files\BDNA\Technopedia Normalize\workfolder\task_1111.zip"
+
+-------------
+
+Other: DB
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,30" /SERVER_NAME=192.168.11.235 /DATABASE=postgres /USERNAME=postgres /PASSWORD=Simple.0 /DATABASE_TYPE=Postgres /CONFIG=customer.extractor.config
+
+-------------
+
+Purchase Order: zip
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10081 /JOB_TYPE=PURCHASE_ORDER /SOURCE_TYPE="Purchase Order,31" /ZIP_FILE_PATH="C:\Program Files\BDNA\Technopedia Normalize\workfolder\task_1111.zip"
+
+-------------
+
+Purchase Order: FILE
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10081 /JOB_TYPE=PURCHASE_ORDER /SOURCE_TYPE="Purchase Order,34" /ZIP_FILE_PATH="C:\Program Files\BDNA\Technopedia Normalize\workfolder\task_CSV.csv"
+
+-------------
+
+Purchase Order: OTHER DB
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10081 /JOB_TYPE=PURCHASE_ORDER /SOURCE_TYPE="Purchase Order,30" /SERVER_NAME=192.168.11.234 /DATABASE=DB2 /USERNAME=db2admin /PASSWORD=Simple.0 /DATABASE_TYPE=DB2 /CONFIG=taddm.extractor(DB2).config
+
+-------------
+
+
+
+Data Mashup : zip
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=DATA_MASHUP /SOURCE_TYPE="Data Mashup,31" /ZIP_FILE_PATH="C:\test\mashup.zip"
+
+-------------
+
+Data Mashup : FILE
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=DATA_MASHUP /SOURCE_TYPE="Data Mashup,34" /ZIP_FILE_PATH="C:\test\mashup.csv" /FILE_OBJECT_TYPE=Machine
+
+-------------
+
+Data Mashup : OTHER DB
+
+NormalizeCMD -ADDDATASOURCE /COMBINE_TO=10078 /JOB_TYPE=DATA_MASHUP /SOURCE_TYPE="Data Mashup,30" /SERVER_NAME=192.168.11.234 /DATABASE=DB2 /USERNAME=db2admin /PASSWORD=Simple.0 /DATABASE_TYPE=DB2 /CONFIG=taddm.extractor(DB2).config
+
+-------------
+
+
+1. CREATEPROCESS
+
+IT Discovery Tool: CM 2007
+
+NormalizeCMD -CREATEPROCESS /JOB_TYPE=NORMALIZE /SOURCE_TYPE="IT Discovery Tool,2" /SERVER_NAME=192.168.11.186 /DATABASE=CM_001 /USERNAME=sa /PASSWORD=Simple.0 /DATABASE_TYPE=MSSQLSERVER /CONFIG=sccm.extractor.config
+
+--------------------------
+
+Mashup Source: ZIP
+
+NormalizeCMD -CREATEPROCESS /COMBINE_TO=10205 /JOB_TYPE=DATA_MASHUP /SOURCE_TYPE="Data Mashup,31" /ZIP_FILE_PATH="C:\test\Data&Mashup.zip"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
